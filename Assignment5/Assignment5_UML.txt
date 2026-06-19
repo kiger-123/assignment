@@ -1,0 +1,44 @@
+Employee
++----------------------------------+
+| # name : string                  |
+| # age : int                      |
++----------------------------------+
+| + Employee(name, age)            |
+| + ~Employee()                    |
+| + print() : void                 |
+| + income() : double              |
++----------------------------------+
+
+        Employee <|-- Waiter
+        Employee <|-- Singer
+        Waiter <|-- SingerWaiter
+        Singer <|-- SingerWaiter
+
+Waiter
++----------------------------------+
+| # basicSalary : double           |
+| # bonus : double                 |
++----------------------------------+
+| + Waiter(...)                    |
+| + print() : void                 |
+| + income() : double              |
++----------------------------------+
+
+Singer
++----------------------------------+
+| # hourlyWage : double            |
+| # weeklyHours : double           |
++----------------------------------+
+| + Singer(...)                    |
+| + print() : void                 |
+| + income() : double              |
++----------------------------------+
+
+SingerWaiter
++----------------------------------+
+| (inherits Waiter + Singer)       |
++----------------------------------+
+| + SingerWaiter(...)              |
+| + print() : void                 |
+| + income() : double              |
++----------------------------------+

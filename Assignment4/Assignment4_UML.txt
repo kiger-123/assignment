@@ -1,0 +1,41 @@
+Account
++----------------------------------+
+| # id : string                    |
+| # balance : double               |
+| # transactionNo : int            |
+| # transactionMemo : string       |
++----------------------------------+
+| + Account(id, balance)           |
+| + ~Account()                     |
+| + withdraw(amount) : bool        |
+| + deposit(amount) : void         |
+| + toString() : string            |
+| + getTransactionNo() : int       |
+| + getTransactionMemo() : string  |
++----------------------------------+
+
+        Account <|-- SavingAccount
+        Account <|-- CheckingAccount
+
+SavingAccount
++----------------------------------+
+| - interestRate : double          |
+| - term : int                     |
++----------------------------------+
+| + SavingAccount(...)             |
+| + ~SavingAccount()               |
+| + withdraw(amount) : bool        |
+| + deposit(amount) : void         |
+| + toString() : string            |
++----------------------------------+
+
+CheckingAccount
++----------------------------------+
+| - overdraftLimit : double        |
++----------------------------------+
+| + CheckingAccount(...)           |
+| + ~CheckingAccount()             |
+| + withdraw(amount) : bool        |
+| + deposit(amount) : void         |
+| + toString() : string            |
++----------------------------------+

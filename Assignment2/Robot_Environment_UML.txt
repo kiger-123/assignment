@@ -1,0 +1,45 @@
++-----------------------------+
+|            Robot            |
++-----------------------------+
+| - x: int                    |
+| - y: int                    |
+| - initX: int                |
+| - initY: int                |
+| - name: string              |
+| - static robotCount: int    |
++-----------------------------+
+| + Robot(...)                |
+| + Robot(const Robot&)       |
+| + operator=(const Robot&)   |
+| + ~Robot()                  |
+| + setPosition(int,int):Robot&|
+| + reset(): Robot&           |
+| + move(Direction,int):Robot&|
+| + draw() const: void        |
+| + getX() const: int         |
+| + getY() const: int         |
+| + getName() const: string   |
+| + getRobotCount(): int {static}|
++-----------------------------+
+
++----------------------------------+
+|           Environment            |
++----------------------------------+
+| - robots: Robot*                 |
+| - robotNum: int                  |
+| - static envCount: int           |
++----------------------------------+
+| + Environment(int=2)             |
+| + Environment(const Environment&)|
+| + operator=(const Environment&)  |
+| + ~Environment()                 |
+| + draw() const: void             |
+| + moveRobot(int,Direction,int):bool|
+| + resetRobot(int): bool          |
+| + controlByKeys(): void          |
+| + getRobot(int) const: const Robot&|
+| + getRobotCount() const: int     |
+| + getEnvironmentCount(): int {static}|
++----------------------------------+
+
+Environment "1" *-- "many" Robot
