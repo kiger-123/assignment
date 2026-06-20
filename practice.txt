@@ -1,1 +1,2 @@
 Practice file for git learning
+Updated content
